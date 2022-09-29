@@ -65,44 +65,57 @@
                     <div class="row gap">
                             <div class="col col-md bg-dark bg-gradient">
                                 <form class="d-flex justify-content-center align-content-center bg-dark bg-gradient gap-md-4 gap-2">
-                                    <label class="d-md-flex d-none align-items-center text-light ">Your password </label>
-                                    <input class="m-1" type="text" disabled>
-                                    <button class="btn btn-outline-light m-1 px-md-4 px-2"><i class="bi bi-clipboard2-check"></i></button>
+                                    <label class="d-md-flex d-none align-items-center text-light">Your password </label>
+                                    <input class="m-1 w-25" type="text" disabled placeholder="Your password will generate here">
+                                    <button class="btn btn-outline-light m-1 px-md-4 px-2" data-toggle="tooltip" data-html="true" title="Copy to clipboard!"><i class="bi bi-clipboard2-check"></i></button>
                                 </form>
                             </div>
                     </div>
                         <div class="row justify-content-center">
-                            <div class=" d-flex col col-md-6 bg-dark g-5">
+                            <div class=" d-flex col col-lg bg-dark g-5 align-items-center justify-content-center select-buttons">
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined large-letters">
                                     <label class="btn btn-outline-success" for="btn-check-outlined large-letters">
-                                      Użyj dużych liter (A-Z)
+                                        <span class="screen-large">Use capital letters (A-Z)</span>
+                                        <span class="screen-small">A-Z</span>
+                                      
                                     </label>
                                 </div>
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined small-letters">
                                     <label class="btn btn-outline-success" for="btn-check-outlined small-letters">
-                                        Użyj małych liter (a-z)
+                                        <span class="screen-large">Use small letters (a-z)</span>
+                                        <span class="screen-small">a-z</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined numbers">
                                     <label class="btn btn-outline-success" for="btn-check-outlined numbers">
-                                        Użyj cyfr liter (0-9)
+                                        <span class="screen-large">Use numbers (0-9)</span>
+                                        <span class="screen-small">0-9</span>
                                     </label>
                                 </div>
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined special">
                                     <label class="btn btn-outline-success" for="btn-check-outlined special">
-                                      Użyj znaków specjalnych (np. . / ? @ % etc.)
+                                      <span class="screen-large">Use special characters (/@#$%.)</span>
+                                        <span class="screen-small">/ @ # .</span>
                                     </label>
                                 </div>
                             </div>
                             
+                        </div>
+                        <div class="row justify-content-center bg-dark bg-gradient text-light">
+                            <span class=" d-flex justify-content-center flex-column align-items-center">Your password will contain :  
+                                <span class="if-large-checked d-none">Large letters </span>
+                                <span class="if-small-checked d-none">Small letters </span>
+                                <span class="if-numbers-checked d-none">Numbers </span>
+                                <span class="if-special-checked d-none">Special characters</span>
+                            </span>
                         </div>
                         
                 </div>
