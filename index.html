@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Password generator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 
+            navbar - tworzy panel nawigacyjny, domyślnie responsywny na mniejszych ekranach
+
+            navbar-expand-md - określa w którym punkcie navbar rozszerza się z menu hamburgera do pełnego paska (md = powyżej szerokości 768px)
+
+            navbar-brand - używane to umieszczania logo czy symbolu marki
+
+            navbar-toggler - oznacza przycisk który pojawi się, gdy menu się przeskaluje na mniejszych ekranach. data-toggle="collapse" oznacza, ze pojawi sie przycisk menu hamburgerowego, a nie drop-down (domyslna opcja)
+
+            navbar-toggler-icon - tworzy ikony, które użytkownicy klikną gdy menu przeskaluje się na mniejszych ekranach
+
+            navbar-nav - klasa dla elementu trzymającego itemy. w tym przypadku nav-item i nav-link
+
+            
+        -->
+        <nav class="navbar navbar-expand-md bg-dark bg-gradient text-light p-2">
+            <a href="#" class="navbar-brand text-light"><i class="bi bi-gem"></i></a>
+            
+            
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end p-2" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="d-flex justify-content-end navbar-item ">
+                        <a href="#" class="nav-link text-light">Home</a>
+                    </li>
+                    <li class="d-flex justify-content-end navbar-item ">
+                        <a href="#" class="nav-link text-light">About</a>
+                    </li>
+                    <li class="d-flex justify-content-end navbar-item ">
+                        <a href="#" class="nav-link text-light">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="container-fluid">
+            <div class="container-fullwidth">
+                <div class="row">
+                    <div class="col col-md bg-secondary">
+                        <h1 class="text-center text-light">Welcome to my <strong>password generator</strong>!</h1> 
+                        
+                        <h3 class="text-center">Check any of the options below, and press the "Generate" button, then just click on the "Copy" icon to copy your new password to the clipboard!</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+                <div class="container-fluid main-container">
+                    <div class="row gap">
+                            <div class="col col-md bg-dark bg-gradient">
+                                <form class="d-flex justify-content-center align-content-center bg-dark bg-gradient gap-md-4 gap-2">
+                                    <label class="d-md-flex d-none align-items-center text-light ">Your password </label>
+                                    <input class="m-1" type="text" disabled>
+                                    <button class="btn btn-outline-light m-1 px-md-4 px-2"><i class="bi bi-clipboard2-check"></i></button>
+                                </form>
+                            </div>
+                    </div>
+                        <div class="row justify-content-center">
+                            <div class=" d-flex col col-md-6 bg-dark g-5">
+
+                                <div class="form-check">
+                                    <input class="btn-check" type="checkbox" id="btn-check-outlined large-letters">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined large-letters">
+                                      Użyj dużych liter (A-Z)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="btn-check" type="checkbox" id="btn-check-outlined small-letters">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined small-letters">
+                                        Użyj małych liter (a-z)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="btn-check" type="checkbox" id="btn-check-outlined numbers">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined numbers">
+                                        Użyj cyfr liter (0-9)
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="btn-check" type="checkbox" id="btn-check-outlined special">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined special">
+                                      Użyj znaków specjalnych (np. . / ? @ % etc.)
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                </div>
+        </main>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>
