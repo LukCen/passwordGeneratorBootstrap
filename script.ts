@@ -1,11 +1,8 @@
-const btnLargeLetters = document.querySelector('#large-letters');
+// const btnLargeLetters: HTMLInputElement | null = document.querySelector('#large-letters') 
 
-const btnSmallLetters = document.querySelector('#small-letters');
+// const btnSmallLetters = document.querySelector('#small-letters');
 
-const btnNumbers = document.querySelector('#numbers');
+// const btnNumbers = document.querySelector('#numbers');
 
-const btnSpecial = document.querySelector('#special');
+// const btnSpecial = document.querySelector('#special');
 
-btnLargeLetters?.addEventListener('change', ()=> {
-    console.log('large selected')
-})

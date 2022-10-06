@@ -12,21 +12,6 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- 
-            navbar - tworzy panel nawigacyjny, domyślnie responsywny na mniejszych ekranach
-
-            navbar-expand-md - określa w którym punkcie navbar rozszerza się z menu hamburgera do pełnego paska (md = powyżej szerokości 768px)
-
-            navbar-brand - używane to umieszczania logo czy symbolu marki
-
-            navbar-toggler - oznacza przycisk który pojawi się, gdy menu się przeskaluje na mniejszych ekranach. data-toggle="collapse" oznacza, ze pojawi sie przycisk menu hamburgerowego, a nie drop-down (domyslna opcja)
-
-            navbar-toggler-icon - tworzy ikony, które użytkownicy klikną gdy menu przeskaluje się na mniejszych ekranach
-
-            navbar-nav - klasa dla elementu trzymającego itemy. w tym przypadku nav-item i nav-link
-
-            
-        -->
         <nav class="navbar navbar-expand-md bg-dark bg-gradient text-light p-2">
             <a href="#" class="navbar-brand text-light"><i class="bi bi-gem"></i></a>
             
@@ -49,6 +34,7 @@
                 </ul>
             </div>
         </nav>
+        <!-- HEADER START -->
         <header class="container-fluid">
             <div class="container-fullwidth">
                 <div class="row">
@@ -60,23 +46,34 @@
                 </div>
             </div>
         </header>
+        <!-- HEADER END -->
+
         <main>
+            <!-- INPUT AND GENERATE/COPY BUTTONS START -->
                 <div class="container-fluid main-container">
                     <div class="row gap">
                             <div class="col col-md bg-dark bg-gradient">
                                 <form class="d-flex justify-content-center align-content-center bg-dark bg-gradient gap-md-4 gap-2">
-                                    <label class="d-md-flex d-none align-items-center text-light">Your password </label>
-                                    <input class="m-1 w-25" type="text" disabled placeholder="Your password will generate here">
-                                    <button class="btn btn-outline-light m-1 px-md-4 px-2" data-toggle="tooltip" data-html="true" title="Copy to clipboard!"><i class="bi bi-clipboard2-check"></i></button>
+                                    <label class="d-md-flex d-none align-items-center text-light" >Your password </label>
+                                    <input class="m-1 w-25" type="text" readonly id="password-output">
+                                    <label class="btn btn-outline-light m-1 px-md-4 px-2" id="btn-generate">Generate password!</label>
                                 </form>
                             </div>
                     </div>
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="d-flex col col-lg bg-dark align-items-center justify-content-center">
+                            <button class="btn btn-outline-light m-1 px-md-4 px-2" data-toggle="tooltip" data-html="true" title="Copy to clipboard!"><i class="bi bi-clipboard2-check"></i>Click me to copy!</button>
+                            
+                        </div>
+                        <!-- INPUT AND GENERATE/COPY BUTTONS END -->
+                    </div>
+                    <!-- CHARACTER SELECT BUTTONS START -->
                         <div class="row justify-content-center">
                             <div class=" d-flex col col-lg bg-dark g-5 align-items-center justify-content-center select-buttons">
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined large-letters">
-                                    <label class="btn btn-outline-success" for="btn-check-outlined large-letters">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined large-letters" id="large-letters-click">
                                         <span class="screen-large">Use capital letters (A-Z)</span>
                                         <span class="screen-small">A-Z</span>
                                       
@@ -85,7 +82,7 @@
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined small-letters">
-                                    <label class="btn btn-outline-success" for="btn-check-outlined small-letters">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined small-letters" id ='small-letters-click'>
                                         <span class="screen-large">Use small letters (a-z)</span>
                                         <span class="screen-small">a-z</span>
                                     </label>
@@ -93,7 +90,7 @@
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined numbers">
-                                    <label class="btn btn-outline-success" for="btn-check-outlined numbers">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined numbers" id="numbers-click">
                                         <span class="screen-large">Use numbers (0-9)</span>
                                         <span class="screen-small">0-9</span>
                                     </label>
@@ -101,14 +98,15 @@
 
                                 <div class="form-check">
                                     <input class="btn-check" type="checkbox" id="btn-check-outlined special">
-                                    <label class="btn btn-outline-success" for="btn-check-outlined special">
+                                    <label class="btn btn-outline-success" for="btn-check-outlined special" id="special-click">
                                       <span class="screen-large">Use special characters (/@#$%.)</span>
                                         <span class="screen-small">/ @ # .</span>
                                     </label>
                                 </div>
                             </div>
-                            
+                            <!-- CHARACTER SELECT BUTTONS END -->
                         </div>
+                        <!-- SELECTION INFO START -->
                         <div class="row justify-content-center bg-dark bg-gradient text-light">
                             <span class=" d-flex justify-content-center flex-column align-items-center">Your password will contain :  
                                 <span class="if-large-checked d-none">Large letters </span>
@@ -117,10 +115,10 @@
                                 <span class="if-special-checked d-none">Special characters</span>
                             </span>
                         </div>
-                        
+                        <!-- SELECTION INFO END -->
                 </div>
         </main>
-        <script src="js/script.js"></script>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
