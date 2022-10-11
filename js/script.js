@@ -1,4 +1,6 @@
 "use strict";
+import * as clip from './clipboard.js';
+
 
 // SELECTORS START
 const btnLargeLetters = document.querySelector('#large-letters-click');
@@ -30,13 +32,6 @@ let testString = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 
 // STRINGS END
 
-
-
-
-// console.log(`random char array value = ${randomCharArray}`)
-
-
-
 // ARRAYS FOR PASSWORD GENERATION START
 const charArray = [largeString, smallString, numberString, specialString];
 
@@ -47,13 +42,6 @@ let smallRandomIndex = Math.floor(Math.random() * smallString.length - 1);
 let numberRandomIndex = Math.floor(Math.random() * numberString.length - 1);
 let specialRandomIndex = Math.floor(Math.random() * specialString.length - 1);
 // ARRAYS END
-
-// console.log(largeRandomIndex)
-// console.log(smallRandomIndex);
-// console.log(numberRandomIndex)
-// console.log(specialRandomIndex);
-
-
 
 // MAIN LOGIC START
 btnLargeLetters.addEventListener('click', () => {
@@ -103,8 +91,6 @@ btnGenerate.addEventListener('click', () => {
     for(let i = 0; i < 12; i++){
         
         generatedPassword += testString.charAt(Math.floor(Math.random()* testLength))
-
-        // console.log(generatedPassword) 
     }
 
     if(passwordOutput.value != ''){
